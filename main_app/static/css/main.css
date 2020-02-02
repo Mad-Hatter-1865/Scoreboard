@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+    margin: 2rem;
+    background-color: black;
+}
+
+table {
+    margin: 2rem auto;
+    border: 3px solid #4666FF;
+}
+
+thead th {
+    border-bottom: 3px solid #4666FF;
+    color: #bc13fe;
+}
+
+.score {
+    color: #00FF66;
+}
+
+table a {
+    color: red;
+    text-decoration: none;
+}
+h1 {
+    color: #bc13fe;
+}
+hr {
+    border: 1px solid #bc13fe;
+}
+
+input {
+    border: 3px solid #4666FF;
+    color: #4666FF;
+    background-color: black;
+    outline: none;
+    padding: 0.5em 1.1em;
+}
+
+input:hover {
+    color: #00FF66;
+    border: 3px solid #00FF66;
+}
+
+#Add th {
+    color: #bc13fe;
+}
+
+h4 {
+    color: #bc13fe;
+}
+
+h3 {
+    color: #bc13fe;
+}
+
+#CancelLink {
+    color: red;
+    text-decoration: none;
+}
