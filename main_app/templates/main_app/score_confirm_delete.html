@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<h1>Delete Score</h1>
+
+  <h4>Are you sure you want to delete this score?</h4>
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes - Delete!" class="btn">
+    <a id=CancelLink href="{% url 'index' %}">Cancel</a>
+  </form>
