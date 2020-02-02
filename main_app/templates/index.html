@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scoreboard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script defer src = "{% static 'js/main.js' %}"></script>
+  
+</head>
+<body>
+    <h1>Scoreboard</h1>
+    {% if scores|length == 0 %}
+        <h3>There are no scores yet.</h3>
+    {% else %}
+        <table id=scoreBoard>
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Score</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            {% for score in scores %}
+                <tr>
+                    <th class="score">{{score.name}}</th>
+                    <th class="score">{{score.points}}</th>
+                    <th><a href="{% url 'scores_delete' score.id %}">X</a></th>
+                </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    <hr>
+    <form method="GET" action="{% url 'scores_create' %}">
+            <input type="submit" value="Add your score">
+            </form>
+    
+
+</body>
+</html>
